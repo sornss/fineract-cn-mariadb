@@ -29,7 +29,7 @@ public interface MariaDBConstants {
   String MARIADB_HOST_PROP = "mariadb.host";
   String MARIADB_HOST_DEFAULT = "localhost";
   String MARIADB_PORT_PROP = "mariadb.port";
-  String MARIADB_PORT_DEFAULT = "3306";
+  String MARIADB_PORT_DEFAULT = "3307";
   String MARIADB_USER_PROP = "mariadb.user";
   String MARIADB_USER_DEFAULT = "root";
   String MARIADB_PASSWORD_PROP = "mariadb.password";
