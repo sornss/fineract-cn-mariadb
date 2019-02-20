@@ -29,12 +29,12 @@ public class JdbcUrlBuilderTest {
 
   @Test
   public void shouldCreateMysqlUrl() {
-    final String expectedJdbcUrl = "jdbc:mariadb://localhost:3306/comp_test";
+    final String expectedJdbcUrl = "jdbc:mariadb://localhost:3307/comp_test";
 
     final String mariaDbJdbcUrl = JdbcUrlBuilder
         .create(JdbcUrlBuilder.DatabaseType.MARIADB)
         .host("localhost")
-        .port("3306")
+        .port("3307")
         .instanceName("comp_test")
         .build();
 
@@ -43,24 +43,24 @@ public class JdbcUrlBuilderTest {
 
   @Test
   public void shouldCreateMysqlUrlNoInstance() {
-    final String expectedJdbcUrl = "jdbc:mariadb://localhost:3306";
+    final String expectedJdbcUrl = "jdbc:mariadb://localhost:3307";
 
     final String mariaDbJdbcUrl = JdbcUrlBuilder
         .create(JdbcUrlBuilder.DatabaseType.MARIADB)
         .host("localhost")
-        .port("3306").build();
+        .port("3307").build();
 
     Assert.assertEquals(expectedJdbcUrl, mariaDbJdbcUrl);
   }
 
   @Test
   public void shouldCreateMysqlReplicationUrl() {
-    final String expectedJdbcUrl = "jdbc:mariadb:replication://localhost:3306,anotherhost:3306/comp_test";
+    final String expectedJdbcUrl = "jdbc:mariadb:replication://localhost:3307,anotherhost:3307/comp_test";
 
     final String mariaDbJdbcUrl = JdbcUrlBuilder
         .create(JdbcUrlBuilder.DatabaseType.MARIADB)
         .host("localhost, anotherhost")
-        .port("3306")
+        .port("3307")
         .instanceName("comp_test")
         .build();
 
